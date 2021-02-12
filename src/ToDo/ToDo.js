@@ -1,37 +1,35 @@
 import React from 'react';
-import Tasks from "./Tasks"
+import Tasks from "./Tasks";
+import B from "./B";
 
 
 class ToDo extends React.Component {
     state = {
-        tasks: ['Task 1', 'Task 2', 'Task 3']
+        inputValue: ''
+    }
+
+handleCatchValue = (value) => {
+        this.setState({
+            inputValue: value
+        })
     }
 
     render() {
-        const Array = this.state.tasks.map((task, index) => {
-            return (
-                <p key={index} className="task" >
 
-                    <Tasks task={task} />
-                </p>
-            )
-        })
+        const {inputValue} = this.state;
 
         return (
             <div>
-                <h1>ToDo</h1>
                 <div>
-                    <input
-                        type="text"
-                        placeholder="Add Task"
-                    />
-                    <button>Add</button>
+                    <h1>ToDo</h1>
                 </div>
-                <div className="task_wrapper" >
-                    {Array}
-                </div >
+                <div >
+                    <B onSubmit={this.handleCatchValue} />
+                </div>
+                <div>
+                    <Tasks inputValue = {inputValue} />
+                </div>
             </div>
-
         )
     }
 }
