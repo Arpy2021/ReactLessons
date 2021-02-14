@@ -1,0 +1,18 @@
+.task{
+  height: 150px;
+  width: 150px;
+  background-color: rgb(230, 23, 23);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.first{
+    background-color: rgb(37, 150, 179);
+
+}
+
+.second{
+    background-color: rgb(240, 170, 66);
+  
+}
