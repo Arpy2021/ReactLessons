@@ -1,6 +1,7 @@
-import { Component } from 'react';
+import  React,{ Component } from 'react';
 import './App.css';
-import ToDo from './Task/ToDo';
+// import ToDo from './Task/ToDo';
+import Grid from './Task/Grid/Grid';
 
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <ToDo />
+       <Grid/>
       </div>
     );
   }
