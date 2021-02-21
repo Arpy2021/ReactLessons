@@ -24,3 +24,8 @@ code {
   margin: 50px auto;
 
 }
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
